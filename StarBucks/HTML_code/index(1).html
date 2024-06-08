@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="/HTML_code/starbucks(css).css">
+    <link rel="icon" href="/Images/logo.png">
+</head>
+<body >
+    <section class="backgroundcolor">
+        <div class="circle">
+
+        </div>
+        <header>
+            <a href="#" class="logo"><img src="/Images/logo.png"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p></p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="/Images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <div id="id01" class="modal">
+
+            
+        </div>
+
+        <ul class="thumb">
+            <li><img src="/Images/thumb1.png" onclick="imgSlider('/Images/img1.png');changeCircleColor('#017143');changeBackgroundColor('#d98659')"></li>
+            <li><img src="/Images/thumb2.png" onclick="imgSlider('/Images/img2.png');changeCircleColor('#eb7495');changeBackgroundColor('#A15589')"></li>
+            <li><img src="/Images/thumb3.png" onclick="imgSlider('/Images/img3.png');changeCircleColor('#d752b1');changeBackgroundColor('#5c5ec7')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Starbucks/"><img src="/Images/facebook.png"></a></li>
+            <li><a href="https://www.instagram.com/starbucks/"><img src="/Images/instagram.png"></a></li>
+            <li><a href="https://twitter.com/starbucks?lang=en"><img src="/Images/twitter.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        const logo = document.querySelector(".logo");
+        logo.onclick = goLogo;
+
+        function goLogo(){
+            console.log("going to the store !!");
+            logo.innerText = "StarBucks";
+        }
+        function imgSlider(anything){ 
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function changeBackgroundColor(color){
+            const backgorundcolor = document.querySelector('.backgroundcolor');
+            backgorundcolor.style.background = color;
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active')
+        }
+        function changeBackgroundColor(color){
+            let backgorundcolor = document.querySelector('.backgroundcolor');
+            backgorundcolor.style.background = color;
+            menuToggle.classList.toggle('')
+        }
+    </script>
+</body>
+</html>
+
+
+
